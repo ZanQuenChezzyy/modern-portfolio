@@ -2,7 +2,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
     const [isScroll, setIsScroll] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu open/close
@@ -53,7 +53,7 @@ const Navbar = () => {
                     <li><a className='font-Ovo' href="#contact">Contact Me</a></li>
                 </ul>
                 <div className={`flex items-center gap-4 ${isMenuOpen ? "hidden" : ""}`}>
-                    <button>
+                    <button onClick={() => setIsDarkMode(prev => !prev)}>
                         <Image src={assets.moon_icon} alt='Moon Icon' className='w-6' />
                     </button>
                     <a className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo' href="#contact">
