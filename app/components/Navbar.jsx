@@ -52,7 +52,7 @@ const Navbar = () => {
                     <li><a className='font-Ovo' href="#work">My Work</a></li>
                     <li><a className='font-Ovo' href="#contact">Contact Me</a></li>
                 </ul>
-                <div className='flex items-center gap-4'>
+                <div className={`flex items-center gap-4 ${isMenuOpen ? "hidden" : ""}`}>
                     <button>
                         <Image src={assets.moon_icon} alt='Moon Icon' className='w-6' />
                     </button>
@@ -65,9 +65,14 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu */}
-                <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500'>
-                    <div className='absolute right-6 top-6' onClick={closeMenu}>
-                        <Image src={assets.close_black} alt='Close Icon' className='w-5 cursor-pointer' />
+                <ul ref={sideMenuRef} className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-white transition duration-500 ${isMenuOpen ? "shadow-2xl" : ""}`}>
+                    <div className='' onClick={closeMenu}>
+                        <Image
+                            src={assets.logo}
+                            className='w-20 cursor-pointer absolute left-10 top-6 flex'
+                            alt='Logo'
+                        />
+                        <Image src={assets.close_black} alt='Close Icon' className='w-5 cursor-pointer absolute right-6 top-6 flex' />
                     </div>
                     <li><a className='font-Ovo' onClick={closeMenu} href="#top">Home</a></li>
                     <li><a className='font-Ovo' onClick={closeMenu} href="#about">About Me</a></li>
