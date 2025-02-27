@@ -69,7 +69,7 @@ const Contact = () => {
     };
 
     return (
-        <div id='contact' className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/assets/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto]'>
+        <div id='contact' className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/assets/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'>
             <h4 className='text-center mb-2 text-lg font-Ovo'>Connect With Me</h4>
             <h2 className='text-center text-5xl font-Ovo'>Get in touch</h2>
 
@@ -81,21 +81,21 @@ const Contact = () => {
             <form onSubmit={onSubmit} className='max-w-2xl mx-auto'>
                 <div className='grid grid-cols-auto gap-6 mt-10 mb-8'>
                     <div>
-                        <input type="text" placeholder='Enter Your Name' name='name' required className='w-full flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-xl bg-white hover:border-gray-800 duration-500' />
+                        <input type="text" placeholder='Enter Your Name' name='name' required className='w-full flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-xl bg-white hover:border-gray-800 duration-500 dark:bg-darkHover/30 dark:border-white/50 dark:hover:border-white' />
                         {errors.name && <p className='text-red-500'>{errors.name}</p>}
                     </div>
                     <div>
-                        <input type="email" placeholder='Enter Your Email' name='email' required className='w-full flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-xl bg-white hover:border-gray-800 duration-500' />
+                        <input type="email" placeholder='Enter Your Email' name='email' required className='w-full flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-xl bg-white hover:border-gray-800 duration-500 dark:bg-darkHover/30 dark:border-white/50 dark:hover:border-white' />
                         {errors.email && <p className='text-red-500'>{errors.email}</p>}
                     </div>
                 </div>
                 <div>
-                    <textarea rows={4} placeholder='Enter Your Message' name='message' required className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-xl bg-white hover:border-gray-800 duration-500'></textarea>
+                    <textarea rows={4} placeholder='Enter Your Message' name='message' required className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-xl bg-white hover:border-gray-800 duration-500 dark:bg-darkHover/30 dark:border-white/50 dark:hover:border-white'></textarea>
                     {errors.message && <p className='text-red-500'>{errors.message}</p>}
                 </div>
                 <button
                     type='submit'
-                    className={`mt-6 py-3 px-8 w-max flex items-center justify-between gap-2 ${isSubmitting ? 'bg-black/50' : 'bg-black/80'} text-white rounded-xl mx-auto hover:bg-black duration-500`}
+                    className={`mt-6 py-3 px-8 w-max flex items-center justify-between gap-2 ${isSubmitting ? 'bg-black/50 dark:bg-black/10' : 'bg-black/80 dark:bg-transparent'} text-white rounded-xl mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover`}
                     disabled={isSubmitting}
                 >
                     {isSubmitting ? "Sending..." : buttonText} <Image src={assets.right_arrow_white} alt='Right Arrow Icon' className='w-4' />
