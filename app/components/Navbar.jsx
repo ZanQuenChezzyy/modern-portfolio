@@ -35,7 +35,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden'>
                 <Image src={assets.header_bg_color} alt='Header Background Color' className='w-full' />
             </div>
-            <nav className={`w-full fixed px-5 lg:px-8 xl:px[-8%] py-4 flex items-center justify-between z-50 duration-500 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20 duration-500" : ""} ${isMenuOpen ? "h-full backdrop-blur" : ""}`}>
+            <nav className={`w-full fixed px-5 lg:px-8 xl:px[-8%] py-4 flex items-center justify-between z-50 duration-500 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:backdrop-blur dark:bg-darkTheme/50 dark:duration-500 dark:shadow-white/20 duration-500" : ""} ${isMenuOpen ? "h-full backdrop-blur" : ""}`}>
                 <a href="#top">
                     <Image
                         src={isDarkMode ? assets.logo_dark : assets.logo}

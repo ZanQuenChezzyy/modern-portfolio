@@ -26,6 +26,7 @@ export default function Home() {
       localStorage.theme = 'dark'
     } else {
       document.documentElement.classList.remove('dark')
+      localStorage.theme = ''
     }
   }, [isDarkMode])
 

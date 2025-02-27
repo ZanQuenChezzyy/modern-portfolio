@@ -2,7 +2,7 @@ import { assets, serviceData } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 
-const Services = () => {
+const Services = ({ isDarkMode }) => {
     return (
         <div id='services' className='w-full px-[12%] py-10 scroll-mt-20'>
             <h4 className='text-center mb-2 text-lg font-Ovo'>What I Offer</h4>
@@ -20,7 +20,7 @@ const Services = () => {
                         <h3 className='text-lg my-4 text-gray-700 dark:text-white'>{title}</h3>
                         <p className='text-sm text-gray-600 leading-5 dark:text-white/80'>{description}</p>
                         <a href={link} className='flex items-center gap-2 text-sm mt-5'>
-                            Read More <Image src={assets.right_arrow} alt='Right Arrow Icon' className='w-4' />
+                            Read More <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow} alt='Right Arrow Icon' className='w-4' />
                         </a>
                     </div>
                 ))}
