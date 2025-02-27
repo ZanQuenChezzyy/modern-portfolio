@@ -7,20 +7,19 @@ import Modal from './Modal';
 const Contact = () => {
     const [result, setResult] = useState("");
     const [buttonText, setButtonText] = useState("Submit Now");
-    const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
-    const [isSubmitting, setIsSubmitting] = useState(false); // State for button disabled
-    const [errors, setErrors] = useState({ name: "", email: "", message: "" }); // State for error messages
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [errors, setErrors] = useState({ name: "", email: "", message: "" });
 
     const onSubmit = async (event) => {
         event.preventDefault();
         setResult("Sending....");
-        setIsSubmitting(true); // Disable button while sending
-        setErrors({ name: "", email: "", message: "" }); // Clear previous errors
+        setIsSubmitting(true);
+        setErrors({ name: "", email: "", message: "" });
 
         const formData = new FormData(event.target);
-        formData.append("access_key", "77942e53-fa76-4607-8eb7-39629ec27662");
+        formData.append("access_key", process.env.NEXT_PUBLIC_ACCESS_KEY);
 
-        // Validation logic
         let hasError = false;
         const name = formData.get('name');
         if (!name || name.length < 3 || name.length > 45) {
@@ -133,7 +132,7 @@ const Contact = () => {
                 </div>
                 <motion.button
                     type='submit'
-                    className={`mt-6 py-3 px-8 w-max flex items-center justify-between gap-2 ${isSubmitting ? 'bg-black/50 dark:bg-black/10' : 'bg-black/80 dark:bg-transparent'} text-white rounded-xl mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover`}
+                    className={`mt-6 py-3 px-8 w-max flex items-center justify-between gap-2 text-white rounded-xl mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover ${isSubmitting ? 'bg-black/50 hover:bg-black/50 dark:bg-black/10 dark:hover:bg-black/10' : 'bg-black/80 dark:bg-transparent'} `}
                     disabled={isSubmitting}
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
