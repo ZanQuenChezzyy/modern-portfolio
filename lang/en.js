@@ -44,5 +44,7 @@ export const en = {
         subTitle: "My Portfolio",
         title: "Latest Project",
         description: "Check out some of my latest projects.",
+        showMore: "Show More",
+        showLess: "Show Less",
     }
 };

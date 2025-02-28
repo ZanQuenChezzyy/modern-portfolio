@@ -1,9 +1,11 @@
 import { assets, workData } from '@/assets/assets'
+import { en } from '@/lang/en'
+import { id } from '@/lang/id'
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import React from 'react'
 
-const Work = ({ isDarkMode }) => {
+const Work = ({ isDarkMode, language }) => {
     return (
         <motion.div id='work' className='w-full px-[12%] py-10 scroll-mt-20'
             initial={{ opacity: 0 }}
@@ -15,14 +17,14 @@ const Work = ({ isDarkMode }) => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3, type: 'keyframes' }}
             >
-                My Portfolio
+                {language === 'EN' ? en.work.subTitle : id.work.subTitle}
             </motion.h4>
             <motion.h2 className='text-center text-5xl font-Ovo'
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5, type: 'keyframes' }}
             >
-                Latest Work
+                {language === 'EN' ? en.work.title : id.work.title}
             </motion.h2>
 
             <motion.p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'
@@ -30,8 +32,7 @@ const Work = ({ isDarkMode }) => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.7, type: 'keyframes' }}
             >
-                I am a Backend Developer from Indonesia with 10 years of experience
-                in multiple companies like Microsoft, Tesla and Apple.
+                {language === 'EN' ? en.work.description : id.work.description}
             </motion.p>
 
             <motion.div className='grid grid-cols-auto my-10 gap-5 dark:text-black'

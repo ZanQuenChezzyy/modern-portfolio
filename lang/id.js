@@ -7,11 +7,11 @@ export const id = {
         contact: 'Hubungi Saya',
     },
     header: {
-        greeting: "Hai! Saya Andereyan Muhammat",
-        title: "Pengembang Web yang tinggal di Indonesia.",
-        description: "Saya memiliki pengalaman membangun berbagai aplikasi web dan gemar mengembangkan sistem yang inovatif dan mudah digunakan. Selalu bersemangat untuk belajar dan berkembang dalam industri teknologi.",
-        contactMe: "Hubungi Saya",
-        downloadCV: "Unduh CV",
+        greeting: "Halo! Saya Andereyan Muhammat",
+        title: "Web Developer yang berbasis di Indonesia.",
+        description: "Saya punya pengalaman bikin berbagai aplikasi web dan suka ngembangin sistem yang simpel, inovatif, dan gampang dipakai. Selalu antusias buat belajar hal baru dan terus berkembang di dunia teknologi.",
+        contactMe: "Kontak Saya",
+        downloadCV: "Download CV",
     },
     about: {
         subTitle: "Perkenalan",
@@ -26,7 +26,7 @@ export const id = {
         toolsTitle: "Alat yang Saya Gunakan",
     },
     services: {
-        subTitle: "Yang Saya tawarkan",
+        subTitle: "Apa yang Saya Tawarkan",
         title: "Layanan Saya",
         description: "Saya siap bantu bikin solusi digital yang simpel, dan gampang dipakai. Dengan pengalaman di berbagai proyek, saya pastikan semuanya berjalan lancar, stabil, dan sesuai kebutuhan.",
         backendDevelopment: "Pengembangan Backend",
