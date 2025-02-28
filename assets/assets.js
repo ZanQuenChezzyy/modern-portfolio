@@ -1,40 +1,66 @@
-import user_image from './user-image.png';
-import code_icon from './code-icon.png';
-import code_icon_dark from './code-icon-dark.png';
-import edu_icon from './edu-icon.png';
-import edu_icon_dark from './edu-icon-dark.png';
-import project_icon from './project-icon.png';
-import project_icon_dark from './project-icon-dark.png';
-import vscode from './vscode.png';
-import firebase from './firebase.png';
-import figma from './figma.png';
-import git from './git.png';
-import mongodb from './mongodb.png';
-import right_arrow_white from './right-arrow-white.png';
-import logo from './logo.png';
-import logo_dark from './logo_dark.png';
-import mail_icon from './mail_icon.png';
-import mail_icon_dark from './mail_icon_dark.png';
-import profile_img from './profile-img.png';
-import download_icon from './download-icon.png';
-import hand_icon from './hand-icon.png';
-import header_bg_color from './header-bg-color.png';
-import moon_icon from './moon_icon.png';
-import sun_icon from './sun_icon.png';
-import arrow_icon from './arrow-icon.png';
-import arrow_icon_dark from './arrow-icon-dark.png';
-import menu_black from './menu-black.png';
-import menu_white from './menu-white.png';
-import close_black from './close-black.png';
-import close_white from './close-white.png';
-import web_icon from './web-icon.png';
-import mobile_icon from './mobile-icon.png';
-import ui_icon from './ui-icon.png';
-import graphics_icon from './graphics-icon.png';
-import right_arrow from './right-arrow.png';
-import send_icon from './send-icon.png';
-import right_arrow_bold from './right-arrow-bold.png';
-import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+// Profile Folder
+import user_image from './profile/user-image.png';
+import profile_img from './profile/profile-img.png';
+import header_bg_color from './profile/header-bg-color.png';
+import Image from 'next/image'; // Import Image from Next.js
+// Icon Folder
+import code_icon from './icon/code-icon.png';
+import code_icon_dark from './icon/code-icon-dark.png';
+import edu_icon from './icon/edu-icon.png';
+import edu_icon_dark from './icon/edu-icon-dark.png';
+import project_icon from './icon/project-icon.png';
+import project_icon_dark from './icon/project-icon-dark.png';
+import vscode from './icon/vscode.png';
+import firebase from './icon/firebase.png';
+import figma from './icon/figma.png';
+import git from './icon/git.png';
+import mongodb from './icon/mongodb.png';
+import right_arrow_white from './icon/right-arrow-white.png';
+import logo from './icon/logo.png';
+import logo_dark from './icon/logo_dark.png';
+import mail_icon from './icon/mail_icon.png';
+import mail_icon_dark from './icon/mail_icon_dark.png';
+import download_icon from './icon/download-icon.png';
+import hand_icon from './icon/hand-icon.png';
+import moon_icon from './icon/moon_icon.png';
+import sun_icon from './icon/sun_icon.png';
+import arrow_icon from './icon/arrow-icon.png';
+import arrow_icon_dark from './icon/arrow-icon-dark.png';
+import menu_black from './icon/menu-black.png';
+import menu_white from './icon/menu-white.png';
+import close_black from './icon/close-black.png';
+import close_white from './icon/close-white.png';
+import web_icon from './icon/web-icon.png';
+import mobile_icon from './icon/mobile-icon.png';
+import ui_icon from './icon/ui-icon.png';
+import graphics_icon from './icon/graphics-icon.png';
+import right_arrow from './icon/right-arrow.png';
+import send_icon from './icon/send-icon.png';
+import right_arrow_bold from './icon/right-arrow-bold.png';
+import right_arrow_bold_dark from './icon/right-arrow-bold-dark.png';
+import phone_white from './icon/phone-white.png';
+import document_black from './icon/document-black.png';
+import laravel_logo from './icon/laravel-logo.png';
+import tailwind_logo from './icon/tailwind-logo.png';
+import react_logo from './icon/react-logo.png';
+import typescript_logo from './icon/typescript-logo.png';
+import github_white from './icon/github-white.png';
+import github_black from './icon/github-black.png';
+import laragon_logo from './icon/laragon-logo.svg';
+import backend_icon_black from './icon/backend-icon-black.png';
+import backend_icon_white from './icon/backend-icon-white.png';
+import web_icon_black from './icon/web-icon-black.png';
+import web_icon_white from './icon/web-icon-white.png';
+import api_icon_black from './icon/api-icon-black.png';
+import api_icon_white from './icon/api-icon-white.png';
+import database_icon_black from './icon/database-icon-black.png';
+import database_icon_white from './icon/database-icon-white.png';
+import down_arrow_white from './icon/down-arrow-white.svg';
+import down_arrow_black from './icon/down-arrow-black.svg';
+import up_arrow_white from './icon/up-arrow-white.svg';
+import up_arrow_black from './icon/up-arrow-black.svg';
+import link_broken from './icon/link-broken.svg';
+import link_accessable from './icon/link-accessable.svg';
 
 export const assets = {
     user_image,
@@ -73,45 +99,116 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    phone_white,
+    document_black,
+    laravel_logo,
+    tailwind_logo,
+    react_logo,
+    typescript_logo,
+    laragon_logo,
+    github_black,
+    github_white,
+    web_icon_black,
+    web_icon_white,
+    backend_icon_black,
+    backend_icon_white,
+    api_icon_black,
+    api_icon_white,
+    database_icon_black,
+    database_icon_white,
+    down_arrow_white,
+    down_arrow_black,
+    up_arrow_white,
+    up_arrow_black,
+    link_broken,
+    link_accessable,
 };
 
 export const workData = [
     {
         title: 'Frontend project',
         description: 'Web Design',
-        bgImage: '/assets/work-1.png',
+        bgImage: '/assets/work-data/work-1.png',
+        Linkicon: assets.link_accessable,
+        link: ''
     },
     {
         title: 'Geo based app',
         description: 'Mobile App',
-        bgImage: '/assets/work-2.png',
+        bgImage: '/assets/work-data/work-2.png',
+        Linkicon: assets.link_broken,
+        link: ''
     },
     {
         title: 'Photography site',
         description: 'Web Design',
-        bgImage: '/assets/work-3.png',
+        bgImage: '/assets/work-data/work-3.png',
+        Linkicon: assets.link_broken,
+        link: ''
     },
     {
         title: 'UI/UX designing',
         description: 'UI/UX Design',
-        bgImage: '/assets/work-4.png',
+        bgImage: '/assets/work-data/work-4.png',
+        Linkicon: assets.link_broken,
+        link: ''
     },
 ]
 
-export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
-]
-
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    {
+        icon: assets.code_icon,
+        iconDark: assets.code_icon_dark,
+        title: 'languages',
+        description: 'languagesDescription',
+    }, {
+        icon: assets.edu_icon,
+        iconDark: assets.edu_icon_dark,
+        title: 'education',
+        description: 'educationDescription',
+    }, {
+        icon: assets.project_icon,
+        iconDark: assets.project_icon_dark,
+        title: 'projects',
+        description: 'projectsDescription',
+    },
 ];
 
+export const serviceData = [
+    {
+        icon: assets.backend_icon_white,
+        iconDark: assets.backend_icon_black,
+        title: 'backendDevelopment',
+        description: 'backendDescription',
+        link: ''
+    }, {
+        icon: assets.web_icon_white,
+        iconDark: assets.web_icon_black,
+        title: 'webDevelopment',
+        description: 'webDescription',
+        link: ''
+    }, {
+        icon: assets.api_icon_white,
+        iconDark: assets.api_icon_black,
+        title: 'apiDevelopment',
+        description: 'apiDescription',
+        link: ''
+    }, {
+        icon: assets.database_icon_white,
+        iconDark: assets.database_icon_black,
+        title: 'databaseManagement',
+        description: 'databaseDescription',
+        link: ''
+    },
+];
+
+
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.laravel_logo,
+    assets.react_logo,
+    assets.tailwind_logo,
+    assets.typescript_logo,
+    assets.laragon_logo,
+    assets.github_white,
 ];

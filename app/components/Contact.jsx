@@ -69,7 +69,7 @@ const Contact = () => {
     };
 
     return (
-        <motion.div id='contact' className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/assets/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'
+        <motion.div id='contact' className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/assets/footer-bg/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, type: 'keyframes' }}
@@ -132,7 +132,7 @@ const Contact = () => {
                 </div>
                 <motion.button
                     type='submit'
-                    className={`mt-6 py-3 px-8 w-max flex items-center justify-between gap-2 text-white rounded-xl mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover ${isSubmitting ? 'bg-black/50 hover:bg-black/50 dark:bg-black/10 dark:hover:bg-black/10' : 'bg-black/80 dark:bg-transparent'} `}
+                    className={`mt-6 py-3 px-8 w-max flex items-center justify-between gap-2 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover dark:border-white ${isSubmitting ? 'bg-black/50 hover:bg-black/50 dark:bg-black/10 dark:hover:bg-black/10' : 'bg-black/80 dark:bg-transparent'} `}
                     disabled={isSubmitting}
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}

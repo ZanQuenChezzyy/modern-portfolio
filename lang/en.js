@@ -1,0 +1,48 @@
+export const en = {
+    navbar: {
+        home: 'Home',
+        about: 'About Me',
+        services: 'Services',
+        work: 'Project',
+        contact: 'Contact Me',
+    },
+    header: {
+        greeting: "Hi! I'm Andereyan Muhammat",
+        title: "Full-Stack Developer based in Indonesia.",
+        description: "I have experience building various web applications and enjoy developing innovative and user-friendly systems. Always eager to learn and grow in the tech industry.",
+        contactMe: "Contact Me",
+        downloadCV: "Download CV",
+    },
+    about: {
+        subTitle: "Introduction",
+        title: "About Me",
+        description: "Andereyan Muhammat, or Andre, is a passionate developer who is always eager to learn and innovate in the world of technology. focus on developing practical, user-friendly digital solutions that meet user needs. With strong problem-solving skills, critical thinking, and attention to detail, Andre is committed to delivering the best results that benefit both companies and society.",
+        languages: "Languages",
+        languagesDescription: "HTML, CSS, PHP, JavaScript, TypeScript, and more",
+        education: "Education",
+        educationDescription: "Sekolah Tinggi Teknologi (STITEK) Bontang",
+        projects: "Projects",
+        projectsDescription: "Built more than 5 projects",
+        toolsTitle: "Tools I Use",
+    },
+    services: {
+        subTitle: "What I Offer",
+        title: "My Services",
+        description: "I provide simple, easy-to-use, and efficient digital solutions. With experience in various projects, I ensure everything runs smoothly, stays stable, and meets your needs.",
+        backendDevelopment: "Backend Development",
+        backendDescription: "I build strong and reliable backends to keep applications running fast, secure, and stable. With a well-structured system, my backend solutions are easy to maintain, support API integrations, and optimize data processing.",
+        webDevelopment: "Web Development",
+        webDescription: "Creating responsive and interactive websites tailored to business needs for a better user experience.",
+        apiDevelopment: "API Development",
+        apiDescription: "Developing fast, secure, and well-documented APIs to ensure smooth data integration between applications.",
+        databaseManagement: "Database Management",
+        databaseDescription: "Managing and optimizing databases to ensure secure, efficient, and reliable data storage and access.",
+        readMore: "Read More",
+        showLess: "Show Less",
+    },
+    work: {
+        subTitle: "My Portfolio",
+        title: "Latest Project",
+        description: "Check out some of my latest projects.",
+    }
+};

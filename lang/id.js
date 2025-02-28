@@ -1,0 +1,48 @@
+export const id = {
+    navbar: {
+        home: 'Utama',
+        about: 'Tentang Saya',
+        services: 'Layanan',
+        work: 'Projek',
+        contact: 'Hubungi Saya',
+    },
+    header: {
+        greeting: "Hai! Saya Andereyan Muhammat",
+        title: "Pengembang Web yang tinggal di Indonesia.",
+        description: "Saya memiliki pengalaman membangun berbagai aplikasi web dan gemar mengembangkan sistem yang inovatif dan mudah digunakan. Selalu bersemangat untuk belajar dan berkembang dalam industri teknologi.",
+        contactMe: "Hubungi Saya",
+        downloadCV: "Unduh CV",
+    },
+    about: {
+        subTitle: "Perkenalan",
+        title: "Tentang Saya",
+        description: "Andereyan Muhammat, atau Andre, adalah seorang developer yang selalu antusias belajar dan berinovasi di dunia teknologi. Fokusnya adalah mengembangkan solusi digital yang simpel, mudah digunakan, dan sesuai dengan kebutuhan pengguna. Dengan kemampuan problem-solving yang kuat, berpikir kritis, dan perhatian pada detail, Andre berkomitmen untuk memberikan hasil terbaik yang berdampak positif bagi perusahaan dan masyarakat.",
+        languages: "Bahasa",
+        languagesDescription: "HTML, CSS, PHP, JavaScript, TypeScript, dan lainnya",
+        education: "Pendidikan",
+        educationDescription: "Sekolah Tinggi Teknologi (STITEK) Bontang",
+        projects: "Proyek",
+        projectsDescription: "Membangun lebih dari 5 proyek",
+        toolsTitle: "Alat yang Saya Gunakan",
+    },
+    services: {
+        subTitle: "Yang Saya tawarkan",
+        title: "Layanan Saya",
+        description: "Saya siap bantu bikin solusi digital yang simpel, dan gampang dipakai. Dengan pengalaman di berbagai proyek, saya pastikan semuanya berjalan lancar, stabil, dan sesuai kebutuhan.",
+        backendDevelopment: "Pengembangan Backend",
+        backendDescription: "Saya bikin backend yang kuat dan bisa diandalkan, biar aplikasi berjalan cepat, aman, dan stabil. Strukturnya rapi, gampang di-maintain, dan siap untuk integrasi API maupun pengolahan data yang maksimal.",
+        webDevelopment: "Pengembangan Web",
+        webDescription: "Bantu bikin website yang responsif, interaktif, dan sesuai dengan kebutuhan bisnis, biar pengalaman pengguna makin nyaman.",
+        apiDevelopment: "Pengembangan API",
+        apiDescription: "Membangun API yang cepat, aman, dan mudah diintegrasikan, supaya aplikasi bisa saling terhubung tanpa hambatan.",
+        databaseManagement: "Manajemen Basis Data",
+        databaseDescription: "Ngatur dan optimasi database biar penyimpanan dan akses data tetap lancar, aman, dan efisien.",
+        readMore: "Baca Selengkapnya",
+        showLess: "Tutup Selengkapnya",
+    },
+    work: {
+        subTitle: "Portfolio Saya",
+        title: "Projek Terbaru",
+        description: "Lihat beberapa projek terbaru yang udah saya buat.",
+    }
+};

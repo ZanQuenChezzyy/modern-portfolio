@@ -1,9 +1,11 @@
 import { assets, infoList, toolsData } from '@/assets/assets'
+import { en } from '@/lang/en'
+import { id } from '@/lang/id'
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import React from 'react'
 
-const About = ({ isDarkMode }) => {
+const About = ({ isDarkMode, language }) => {
     return (
         <motion.div id='about' className='w-full px-[12%] py-10 scroll-mt-20'
             initial={{ opacity: 0 }}
@@ -15,14 +17,14 @@ const About = ({ isDarkMode }) => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, type: 'keyframes' }}
             >
-                Introduction
+                {language === 'EN' ? en.about.subTitle : id.about.subTitle}
             </motion.h4>
             <motion.h2 className='text-center text-5xl font-Ovo'
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3, type: 'keyframes' }}
             >
-                About Me
+                {language === 'EN' ? en.about.title : id.about.title}
             </motion.h2>
 
             <div className='flex justify-center'>
@@ -44,10 +46,7 @@ const About = ({ isDarkMode }) => {
                         transition={{ duration: 0.6, delay: 0.8, type: 'keyframes' }}
                     >
                         <p className='text-justify mb-10 max-w-2xl font-Ovo'>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            In vero eaque libero inventore, ipsa quisquam repudiandae saepe.
-                            Incidunt molestias fugiat nostrum asperiores veniam, hic adipisci,
-                            dolores placeat quia numquam corrupti?
+                            {language === 'EN' ? en.about.description : id.about.description}
                         </p>
                         <motion.ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'
                             initial={{ opacity: 0 }}
@@ -59,8 +58,8 @@ const About = ({ isDarkMode }) => {
                                     whileHover={{ scale: 1.05 }}
                                 >
                                     <Image src={isDarkMode ? iconDark : icon} alt={title} className='w-7 mt-3' />
-                                    <h3 className='my-4 font-semibold text-gray-700 dark:text-white'>{title}</h3>
-                                    <p className='text-gray-600 text-sm dark:text-white/80'>{description}</p>
+                                    <h3 className='my-4 font-semibold text-gray-700 dark:text-white'>{language === 'EN' ? en.about[title] : id.about[title]}</h3>
+                                    <p className='text-gray-600 text-sm dark:text-white/80'>{language === 'EN' ? en.about[description] : id.about[description]}</p>
                                 </motion.li>
                             ))}
                         </motion.ul>
@@ -70,20 +69,23 @@ const About = ({ isDarkMode }) => {
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.5, delay: 1, type: 'keyframes' }}
                         >
-                            Tools I Use
+                            {language === 'EN' ? en.about.toolsTitle : id.about.toolsTitle}
                         </motion.h4>
                         <motion.ul className='flex items-center gap-3 sm:gap-5'
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.6, delay: 1, type: 'keyframes' }}
                         >
-                            {toolsData.map((tool, index) => (
-                                <motion.li key={index} className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
-                                    whileHover={{ scale: 1.1 }}
-                                >
-                                    <Image src={tool} alt={tool} className='w-5 sm:w-7' />
-                                </motion.li>
-                            ))}
+                            {toolsData.map((tool, index) => {
+                                const displayTool = tool === assets.github_white ? (isDarkMode ? assets.github_white : assets.github_black) : tool;
+                                return (
+                                    <motion.li key={index} className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
+                                        whileHover={{ scale: 1.1 }}
+                                    >
+                                        <Image src={displayTool} alt={tool} className='w-5 sm:w-7' />
+                                    </motion.li>
+                                );
+                            })}
                         </motion.ul>
                     </motion.div>
                 </motion.div>

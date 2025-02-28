@@ -49,9 +49,9 @@ const Work = ({ isDarkMode }) => {
                                 <h2 className='font-semibold'>{project.title}</h2>
                                 <p className='text-sm text-gray-700'>{project.description}</p>
                             </div>
-                            <div className='border rounded-md border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-blue-300 transition'>
-                                <Image src={assets.send_icon} alt='Send Icon' className='w-5' />
-                            </div>
+                            <a href={project.link} className={`border rounded-md border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] transition ${project.Linkicon === assets.link_broken ? 'group-hover:bg-slate-300' : 'group-hover:bg-blue-300'}`}>
+                                <Image src={project.Linkicon} alt='Link Icon' className='w-5' />
+                            </a>
                         </div>
                     </motion.div>
                 ))}

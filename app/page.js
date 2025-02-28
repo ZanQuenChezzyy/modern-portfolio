@@ -11,9 +11,19 @@ import Work from "./components/Work";
 export default function Home() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [language, setLanguage] = useState('EN'); // Default value
 
   useEffect(() => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (typeof window !== 'undefined') {
+      const storedLanguage = localStorage.getItem('language');
+      if (storedLanguage) {
+        setLanguage(storedLanguage);
+      }
+    }
+  }, []); // Add the closing bracket here
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))) {
       setIsDarkMode(true)
     } else {
       setIsDarkMode(false)
@@ -30,15 +40,19 @@ export default function Home() {
     }
   }, [isDarkMode])
 
+  useEffect(() => {
+    localStorage.setItem('language', language);
+  }, [language])
+
   return (
     <>
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <Header isDarkMode={isDarkMode} />
-      <About isDarkMode={isDarkMode} />
-      <Services isDarkMode={isDarkMode} />
-      <Work isDarkMode={isDarkMode} />
-      <Contact isDarkMode={isDarkMode} />
-      <Footer isDarkMode={isDarkMode} />
+      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} language={language} setLanguage={setLanguage} />
+      <Header isDarkMode={isDarkMode} language={language} />
+      <About isDarkMode={isDarkMode} language={language} />
+      <Services isDarkMode={isDarkMode} language={language} />
+      <Work isDarkMode={isDarkMode} language={language} />
+      <Contact isDarkMode={isDarkMode} language={language} />
+      <Footer isDarkMode={isDarkMode} language={language} />
     </>
   );
 }
