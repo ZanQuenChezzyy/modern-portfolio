@@ -71,7 +71,8 @@ const About = ({ isDarkMode, language }) => {
                         >
                             {language === 'EN' ? en.about.toolsTitle : id.about.toolsTitle}
                         </motion.h4>
-                        <motion.ul className='flex items-center gap-3 sm:gap-5'
+                        <motion.ul
+                            className="grid grid-cols-4 sm:grid-cols-6 gap-3 sm:gap-5"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.6, delay: 1, type: 'keyframes' }}
@@ -79,10 +80,12 @@ const About = ({ isDarkMode, language }) => {
                             {toolsData.map((tool, index) => {
                                 const displayTool = tool === assets.github_white ? (isDarkMode ? assets.github_white : assets.github_black) : tool;
                                 return (
-                                    <motion.li key={index} className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
+                                    <motion.li
+                                        key={index}
+                                        className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
                                         whileHover={{ scale: 1.1 }}
                                     >
-                                        <Image src={displayTool} alt={tool} className='w-5 sm:w-7' />
+                                        <Image src={displayTool} alt={tool} className="w-5 sm:w-7" />
                                     </motion.li>
                                 );
                             })}

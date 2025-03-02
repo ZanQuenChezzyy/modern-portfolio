@@ -2,7 +2,7 @@
 import user_image from './profile/user-image.png';
 import profile_img from './profile/profile-img.png';
 import header_bg_color from './profile/header-bg-color.png';
-import Image from 'next/image'; // Import Image from Next.js
+
 // Icon Folder
 import code_icon from './icon/code-icon.png';
 import code_icon_dark from './icon/code-icon-dark.png';
@@ -61,6 +61,8 @@ import up_arrow_white from './icon/up-arrow-white.svg';
 import up_arrow_black from './icon/up-arrow-black.svg';
 import link_broken from './icon/link-broken.svg';
 import link_accessable from './icon/link-accessable.svg';
+import vite_logo from './icon/vite-logo.png';
+import javascript_logo from './icon/javascript-logo.png';
 
 export const assets = {
     user_image,
@@ -123,34 +125,57 @@ export const assets = {
     up_arrow_black,
     link_broken,
     link_accessable,
+    vite_logo,
+    javascript_logo,
 };
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'Menara Marina',
+        description: 'PT. Badak NGL',
+        bgImage: '/assets/work-data/menara-marina.png',
+        Linkicon: assets.link_accessable,
+        link: 'https://menara-marina.vercel.app'
+    },
+    {
+        title: 'Vapestore E-Catalog',
+        description: 'Join Vapor Bontang',
         bgImage: '/assets/work-data/work-1.png',
         Linkicon: assets.link_accessable,
         link: ''
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'Purchase Report',
+        description: 'PT. Kaltim Parna Industri',
         bgImage: '/assets/work-data/work-2.png',
         Linkicon: assets.link_broken,
         link: ''
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'Report Management',
+        description: 'PT. Indominco Mandiri',
+        bgImage: '/assets/work-data/work-4.png',
+        Linkicon: assets.link_broken,
+        link: ''
+    },
+    {
+        title: 'EOL Management',
+        description: 'PT. Kaltim Methanol Industri',
+        bgImage: '/assets/work-data/work-4.png',
+        Linkicon: assets.link_broken,
+        link: ''
+    },
+    {
+        title: 'ITSC Badak LNG',
+        description: 'PT. Badak NGL',
         bgImage: '/assets/work-data/work-3.png',
         Linkicon: assets.link_broken,
         link: ''
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/assets/work-data/work-4.png',
+        title: 'SIM Kerja Praktik',
+        description: 'STITEK Bontang',
+        bgImage: '/assets/work-data/work-3.png',
         Linkicon: assets.link_broken,
         link: ''
     },
@@ -206,9 +231,11 @@ export const serviceData = [
 
 export const toolsData = [
     assets.laravel_logo,
+    assets.vite_logo,
     assets.react_logo,
-    assets.tailwind_logo,
+    assets.javascript_logo,
     assets.typescript_logo,
+    assets.tailwind_logo,
     assets.laragon_logo,
     assets.github_white,
 ];
